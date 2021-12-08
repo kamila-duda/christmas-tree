@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas tree</title>
+    
+</head>
+
+<body style="min-height: 100vh; margin: 0; display: grid; place-items: center; background: rgba(183, 220, 247); box-shadow: 0px 1px 31px 48px rgba(255, 255, 255, 1) inset; -webkit-box-shadow: 0px 1px 31px 48px rgba(255, 255, 255, 1) inset; -moz-box-shadow: 0px 1px 31px 48px rgba(255, 255, 255, 1) inset; overflow-x: hidden;">
+    <div class="tree-container" style="width: 50%; max-width: 500px; height: 520px; display: grid; place-items: center; position: relative; margin-top: 50px;">
+        <div class="row" style="height: 200px; clip-path: polygon(50% 0%,
+                    100% 100%,
+                    75% 75%,
+                    66% 100%,
+                    50% 75%,
+                    33% 100%,
+                    25% 75%,
+                    0 100%); background: rgb(2, 0, 36); background: linear-gradient(180deg,
+                    rgba(2, 0, 36, 1) 0%,
+                    rgba(43, 117, 28, 1) 90%); width: 95%; border: 1px solid pink; position: absolute; top: 255px;">
+        </div>
+        <div class="row" style="height: 200px; clip-path: polygon(50% 0%,
+                    100% 100%,
+                    75% 75%,
+                    66% 100%,
+                    50% 75%,
+                    33% 100%,
+                    25% 75%,
+                    0 100%); background: rgb(2, 0, 36); background: linear-gradient(180deg,
+                    rgba(2, 0, 36, 1) 0%,
+                    rgba(43, 117, 28, 1) 90%); width: 80%; border: 1px solid pink; position: absolute; top: 155px;">
+        </div>
+        <div class="row" style="height: 200px; clip-path: polygon(50% 0%,
+                    100% 100%,
+                    75% 75%,
+                    66% 100%,
+                    50% 75%,
+                    33% 100%,
+                    25% 75%,
+                    0 100%); background: rgb(2, 0, 36); background: linear-gradient(180deg,
+                    rgba(2, 0, 36, 1) 0%,
+                    rgba(43, 117, 28, 1) 90%); width: 60%; border: 1px solid pink; position: absolute; top: 55px;">
+        </div>
+        <div class="star" style="width: 80px; height: 80px; background: rgb(246, 237, 7); clip-path: polygon(50% 0%,
+                    61% 35%,
+                    98% 35%,
+                    68% 57%,
+                    79% 91%,
+                    50% 70%,
+                    21% 91%,
+                    32% 57%,
+                    2% 35%,
+                    39% 35%); position: absolute; top: 0;"></div>
+        <div class="trunk" style="width: 20%; height: 150px; background: rgb(2, 0, 36); background: linear-gradient(180deg,
+                    rgba(2, 0, 36, 1) 0%,
+                    rgba(126, 86, 27, 1) 70%); position: absolute; top: 355px; z-index: -1;"></div>
+        <span class="ball" style="width: 25px; height: 25px; background: red; border-radius: 50%; position: absolute; top: 170px; left: 35%;"></span>
+        <span class="ball" style="width: 25px; height: 25px; background: red; border-radius: 50%; position: absolute; top: 150px; right: 35%;"></span>
+        <span class="ball" style="width: 25px; height: 25px; background: red; border-radius: 50%; position: absolute; top: 310px; right: 20%;"></span>
+        <span class="ball" style="width: 25px; height: 25px; background: red; border-radius: 50%; position: absolute; top: 320px; left: 20%;"></span>
+        <span class="ball" style="width: 25px; height: 25px; background: red; border-radius: 50%; position: absolute; top: 280px;"></span>
+        <span class="ball" style="width: 25px; height: 25px; background: red; border-radius: 50%; position: absolute; top: 400px; left: 30%;"></span>
+        <span class="ball" style="width: 25px; height: 25px; background: red; border-radius: 50%; position: absolute; top: 400px; right: 30%;"></span>
+        <span class="lights lights-first" style="width: 32%; height: 60px; border-radius: 50%; border-bottom: 6px dotted lightyellow; z-index: 1; transform: rotate(20deg); position: absolute; top: 120px; animation: blink 2s infinite; left: 38%;"></span>
+        <span class="lights lights-second" style="height: 60px; border-radius: 50%; border-bottom: 6px dotted lightyellow; z-index: 1; position: absolute; animation: blink 2s infinite; width: 42%; transform: rotate(-20deg); top: 200px;"></span>
+        <span class="lights lights-third" style="height: 60px; border-radius: 50%; border-bottom: 6px dotted lightyellow; z-index: 1; position: absolute; animation: blink 2s infinite; width: 52%; transform: rotate(5deg); top: 340px; left: 28%;"></span>
+    </div>
+    <div class="wishes-wrapper" style="width: max-content;">
+        <h1 class="wishes" style="font-size: 2em; font-family: 'Courier New'; overflow: hidden; white-space: nowrap; border-right: 0.15em solid #18bdec; animation: typing 3s steps(15) 1s 1 normal both, blink 1s steps(1) infinite;">Wesołych Świąt!</h1>
+    </div>
+    <div class="snow-container">
+        <span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span><span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span><span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span><span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span><span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span><span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span><span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span><span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span><span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span><span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span><span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span><span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span><span style="position: absolute; bottom: 100%; background: white; box-shadow: 0px 0px 5px 5px white; width: 6px; height: 6px; border-radius: 50%; animation: snowing 25s linear infinite; z-index: 10;"></span>
+    </div>
+    
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
+<script>
+    const snow = document.querySelectorAll('.snow-container > span');
+
+    const random = (item) => {
+        const left = Math.random() * 100;
+        const delay = Math.random() * 15;
+        return item.setAttribute("style", `left: ${left}%; animation-delay: ${delay}s;`);
+    }
+
+    for (i = 0; i < snow.length; i++) {
+        random(snow[i])
+    }
+</script>
+
+</html>

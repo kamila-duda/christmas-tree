@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas tree</title>
+    <style>
+        .tree-container {
+            width: 50%;
+            max-width: 500px;
+            height: 520px;
+            display: grid;
+            place-items: center;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .star {
+            width: 80px;
+            height: 80px;
+            background: rgb(246, 237, 7);
+            clip-path: polygon(50% 0%,
+                    61% 35%,
+                    98% 35%,
+                    68% 57%,
+                    79% 91%,
+                    50% 70%,
+                    21% 91%,
+                    32% 57%,
+                    2% 35%,
+                    39% 35%);
+            position: absolute;
+            top: 0;
+        }
+
+        .row {
+            height: 200px;
+            clip-path: polygon(50% 0%,
+                    100% 100%,
+                    75% 75%,
+                    66% 100%,
+                    50% 75%,
+                    33% 100%,
+                    25% 75%,
+                    0 100%);
+            background: rgb(2, 0, 36);
+            background: linear-gradient(180deg,
+                    rgba(2, 0, 36, 1) 0%,
+                    rgba(43, 117, 28, 1) 90%);
+        }
+
+        .row:nth-of-type(1) {
+            width: 95%;
+            border: 1px solid pink;
+            position: absolute;
+            top: 255px;
+        }
+
+        .row:nth-of-type(2) {
+            width: 80%;
+            border: 1px solid pink;
+            position: absolute;
+            top: 155px;
+        }
+
+        .row:nth-of-type(3) {
+            width: 60%;
+            border: 1px solid pink;
+            position: absolute;
+            top: 55px;
+        }
+
+        .trunk {
+            width: 20%;
+            height: 150px;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(180deg,
+                    rgba(2, 0, 36, 1) 0%,
+                    rgba(126, 86, 27, 1) 70%);
+            position: absolute;
+            top: 355px;
+            z-index: -1;
+        }
+
+        .ball {
+            width: 25px;
+            height: 25px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .ball:nth-of-type(1) {
+            top: 170px;
+            left: 35%;
+        }
+
+        .ball:nth-of-type(2) {
+            top: 150px;
+            right: 35%;
+        }
+
+        .ball:nth-of-type(3) {
+            top: 310px;
+            right: 20%;
+        }
+
+        .ball:nth-of-type(4) {
+            top: 320px;
+            left: 20%;
+        }
+
+        .ball:nth-of-type(5) {
+            top: 280px;
+        }
+
+        .ball:nth-of-type(6) {
+            top: 400px;
+            left: 30%;
+        }
+
+        .ball:nth-of-type(7) {
+            top: 410px;
+            right: 30%;
+        }
+
+        .lights {
+            width: 32%;
+            height: 60px;
+            border-radius: 50%;
+            border-bottom: 6px dotted lightyellow;
+            z-index: 1;
+            transform: rotate(20deg);
+            position: absolute;
+            top: 120px;
+            animation: blink 2s infinite;
+        }
+
+        .lights-first {
+            left: 38%;
+        }
+
+        .lights-second {
+            width: 42%;
+            transform: rotate(-20deg);
+            top: 200px;
+        }
+
+        .lights-third {
+            width: 52%;
+            transform: rotate(5deg);
+            top: 340px;
+            left: 28%;
+        }
+
+        .wishes {
+            font-size: 2em;
+            font-family: "Courier New";
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 0.15em solid #18bdec;
+            animation: typing 3s steps(15) 1s 1 normal both, blink 1s steps(1) infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        @keyframes snowing {
+            100% {
+                bottom: 50px;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            background: rgba(183, 220, 247);
+            box-shadow: 0px 1px 31px 48px rgba(255, 255, 255, 1) inset;
+            -webkit-box-shadow: 0px 1px 31px 48px rgba(255, 255, 255, 1) inset;
+            -moz-box-shadow: 0px 1px 31px 48px rgba(255, 255, 255, 1) inset;
+            overflow-x: hidden;
+        }
+
+        .wishes-wrapper {
+            width: max-content;
+        }
+
+        .snow-container>span {
+            position: absolute;
+            bottom: 100%;
+            background: white;
+            box-shadow: 0px 0px 5px 5px white;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            animation: snowing 25s linear infinite;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='tree-container'>
+        <div class='row'>
+        </div>
+        <div class='row'>
+        </div>
+        <div class='row'>
+        </div>
+        <div class='star'></div>
+        <div class='trunk'></div>
+        <span class='ball'></span>
+        <span class='ball'></span>
+        <span class='ball'></span>
+        <span class='ball'></span>
+        <span class='ball'></span>
+        <span class='ball'></span>
+        <span class='ball'></span>
+        <span class='lights lights-first'></span>
+        <span class='lights lights-second'></span>
+        <span class='lights lights-third'></span>
+    </div>
+    <div class='wishes-wrapper'>
+        <h1 class='wishes'>Wesołych Świąt!</h1>
+    </div>
+    <div class='snow-container'>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    </div>
+</body>
+<script>
+    const snow = document.querySelectorAll('.snow-container > span');
+
+    const random = (item) => {
+        const left = Math.random() * 100;
+        const delay = Math.random() * 15;
+        return item.setAttribute("style", `left: ${left}%; animation-delay: ${delay}s;`);
+    }
+
+    for (i = 0; i < snow.length; i++) {
+        random(snow[i])
+    }
+</script>
+
+</html>
